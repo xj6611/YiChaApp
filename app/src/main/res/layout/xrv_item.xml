@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/SectionTest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/FirstList"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="match_parent"
+            android:divider="@null" />
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/SecondList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/view2"
+            android:cacheColorHint="#00000000"
+            android:divider="@null" />
+    </LinearLayout>
+</RelativeLayout>

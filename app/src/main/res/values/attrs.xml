@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="cpCancelTextSize" format="dimension|reference" />
+    <attr name="cpCancelTextColor" format="color|reference" />
+
+    <attr name="cpClearTextIcon" format="reference" />
+    <attr name="cpSearchTextSize" format="dimension|reference" />
+    <attr name="cpSearchTextColor" format="color|reference" />
+    <attr name="cpSearchHintText" format="string|reference" />
+    <attr name="cpSearchHintTextColor" format="color|reference" />
+    <attr name="cpSearchCursorDrawable" format="reference" />
+
+    <attr name="cpListItemTextSize" format="dimension|reference" />
+    <attr name="cpListItemTextColor" format="color|reference" />
+    <attr name="cpListItemHeight" format="dimension|reference"/>
+
+    <attr name="cpEmptyIcon" format="reference"/>
+    <attr name="cpEmptyIconWidth" format="dimension|reference"/>
+    <attr name="cpEmptyIconHeight" format="dimension|reference"/>
+    <attr name="cpEmptyText" format="string|reference"/>
+    <attr name="cpEmptyTextSize" format="dimension|reference"/>
+    <attr name="cpEmptyTextColor" format="color|reference"/>
+
+    <attr name="cpGridItemBackground" format="color|reference"/>
+    <attr name="cpGridItemSpace" format="reference"/>
+
+    <attr name="cpSectionHeight" format="reference"/>
+    <attr name="cpSectionTextSize" format="reference" />
+    <attr name="cpSectionTextColor" format="reference" />
+    <attr name="cpSectionBackground" format="reference" />
+
+    <attr name="cpIndexBarTextSize" format="reference" />
+    <attr name="cpIndexBarNormalTextColor" format="reference" />
+    <attr name="cpIndexBarSelectedTextColor" format="reference" />
+
+    <attr name="cpOverlayWidth" format="dimension|reference"/>
+    <attr name="cpOverlayHeight" format="dimension|reference"/>
+    <attr name="cpOverlayTextSize" format="dimension|reference"/>
+    <attr name="cpOverlayTextColor" format="color|reference"/>
+    <attr name="cpOverlayBackground" format="color|reference"/>
+    <declare-styleable name="RadarView">
+        <attr name="radar_layer" format="integer" />
+        <attr name="rotation_enable" format="boolean" />
+        <attr name="web_mode" format="enum">
+            <enum name="polygon" value="1" />
+            <enum name="circle" value="2" />
+        </attr>
+        <attr name="max_value" format="float" />
+
+        <attr name="vertex_line_color" format="color" />
+        <attr name="vertex_line_width" format="dimension" />
+        <attr name="layer_line_color" format="color" />
+        <attr name="layer_line_width" format="dimension" />
+        <attr name="vertex_text_color" format="color" />
+        <attr name="vertex_text_size" format="dimension" />
+        <attr name="vertex_icon_size" format="dimension" />
+        <attr name="vertex_icon_position" format="enum">
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+            <enum name="top" value="3" />
+            <enum name="bottom" value="4" />
+            <enum name="center" value="5" />
+        </attr>
+        <attr name="vertex_icon_margin" format="dimension" />
+        <attr name="center_text_color" format="color" />
+        <attr name="center_text_size" format="dimension" />
+        <attr name="vertex_text_offset" format="dimension" />
+
+        <attr name="center_text" format="string" />
+        <attr name="vertex_text" format="reference" />
+
+
+        //Deprecated
+        <attr name="radar_line_color" format="color" />
+        <attr name="radar_line_enable" format="boolean" />
+        <attr name="radar_line_width" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="TagFlowLayout">
+        <attr name="showHighlight" format="boolean" />
+        <attr name="defaultDrawable" format="reference" />
+        <attr name="selectDrawable" format="reference" />
+        <attr name="defaultTextColor" format="color|reference"/>
+        <attr name="selectTextColor" format="color|reference" />
+        <attr name="mode">
+            <enum name="MULTI" value="0" />
+            <enum name="SINGLE" value="1"/>
+        </attr>
+        <attr name="maxSelectionCount" format="integer"/>
+    </declare-styleable>
+</resources>

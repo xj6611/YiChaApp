@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="MyHeZuo">
+        <item>手机</item>
+        <item>笔记本</item>
+        <item>电动车</item>
+    </string-array>
+</resources>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="我的"
+        android:textColor="#000000"
+        android:textSize="18.0sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginTop="10.0dip">
+
+                <com.yicha.app.Class.CircleImageView
+                    android:id="@+id/My_TouXiang_CircleImageView"
+                    android:layout_width="80.0dip"
+                    android:layout_height="80.0dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/touciang" />
+
+                <TextView
+                    android:id="@+id/My_name_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/My_TouXiang_CircleImageView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:text="佚名（cx0000）"
+                    android:textColor="#ff333333"
+                    android:textSize="15.0sp"
+                    />
+
+                <TextView
+                    android:id="@+id/My_bumen_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/My_name_TextView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="7.0dip"
+                    android:text="部门：未填写"
+                    android:textColor="#ff666666"
+                    android:textSize="13.0sp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/My_ZhiWei_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/My_bumen_TextView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="7.0dip"
+                    android:text="职位：未填写"
+                    android:textColor="#ff666666"
+                    android:textSize="13.0sp"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10.0dip"
+                android:background="@color/main_bg"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/My_guangyu_textView"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:gravity="center_vertical"
+                android:text="关于"
+                android:textColor="#ff333333"
+                android:textSize="15.0sp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/main_bg" />
+
+            <TextView
+                android:id="@+id/My_Updeta_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:gravity="center_vertical"
+                android:text="关于"
+                android:textColor="#ff333333"
+                android:textSize="15.0sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/main_bg" />
+
+            <TextView
+                android:id="@+id/My_QingLiHuangCun_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:gravity="center_vertical"
+                android:text="版本"
+                android:textColor="#ff333333"
+                android:textSize="15.0sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/main_bg" />
+
+            <TextView
+                android:id="@+id/ResetYouPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:text="修改密码"
+                android:textColor="#ff333333"
+                android:textSize="15.0sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/main_bg" />
+             <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:text="关于"
+                android:textColor="#ff333333"
+                android:textSize="15.0sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/main_bg" />
+
+            <Button
+                android:id="@+id/TuiChu_Button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/red"
+                android:text="退出登录"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/main_bg" />
+
+</LinearLayout>
