@@ -41,8 +41,6 @@ public class Card_DatatlisActivity extends BaseActivity implements Card_DatalisC
     private Card_DatalisContact.Presenter presenter;
     @BindView(R.id.recycleView)
     XRecyclerView recycleview;
-    private SelfDialog selfDialog;
-    private SimpleDateFormat simpleDateFormat;
     private HashMap<String, String> stringHashMap;
     private String title;
     @Override
@@ -50,7 +48,6 @@ public class Card_DatatlisActivity extends BaseActivity implements Card_DatalisC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pc__datatlis);
         ButterKnife.bind(this);
-        simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         id = getIntent().getIntExtra("id", 0);
         title = getIntent().getStringExtra("name");
         ScreenResolution = getIntent().getStringExtra("ScreenResolution");
@@ -88,7 +85,7 @@ public class Card_DatatlisActivity extends BaseActivity implements Card_DatalisC
                 return;
             case R.id.mLoginTv:
                 Intent intent = new Intent();
-                intent.setClass(this, PC_ValuationActivity.class);
+                intent.setClass(this, Card_ValuationActivity.class);
                 intent.putExtra("name", title);
                 intent.putExtra("id", id);
                 intent.putExtra("CpuModel", CpuModel);

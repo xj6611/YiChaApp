@@ -25,7 +25,7 @@ public class GuJiaPresenter implements GuJiaContact.Presenter {
     public void request() {
         view.showProgress(null);
         RetrofitService service = RetrofitClient.getInstance().create(RetrofitService.class);
-        service.getPCPrice(this.view.getParts())//获取Observable对象
+        service.getPCPrice(view.getParts())//获取Observable对象
                 .subscribeOn(Schedulers.newThread())//请求在新的线程中执行
                 .observeOn(Schedulers.io())         //请求完成后在io线程中执行
                 .observeOn(AndroidSchedulers.mainThread())//最后在主线程中执行
@@ -64,7 +64,7 @@ public class GuJiaPresenter implements GuJiaContact.Presenter {
     public void requestCard() {
         view.showProgress(null);
         RetrofitService service = RetrofitClient.getInstance().create(RetrofitService.class);
-        service.getBikePrice(this.view.getParts())//获取Observable对象
+        service.getBikePrice(view.getParts())//获取Observable对象
                 .subscribeOn(Schedulers.newThread())//请求在新的线程中执行
                 .observeOn(Schedulers.io())         //请求完成后在io线程中执行
                 .observeOn(AndroidSchedulers.mainThread())//最后在主线程中执行

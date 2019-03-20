@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/Table_RelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_44">
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="@dimen/dp_10"
+            android:text="江苏省涉案财产价格鉴证操作规程"
+            android:textColor="@color/A333333"
+            android:textSize="@dimen/sp_17" />
+
+        <FrameLayout
+            android:id="@+id/Add_FrameLayout"
+            android:layout_width="40.0dip"
+            android:layout_height="60.0dip"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/left" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:background="@color/view2" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadeScrollbars="true">
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:lineSpacingExtra="@dimen/dp_10"
+            android:textColor="@color/A666666"
+            android:textSize="@dimen/sp_14" />
+    </ScrollView>
+</LinearLayout>

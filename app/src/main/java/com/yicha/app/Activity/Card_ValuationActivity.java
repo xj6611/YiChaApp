@@ -1,5 +1,6 @@
 package com.yicha.app.Activity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
@@ -54,8 +55,9 @@ public class Card_ValuationActivity extends BaseActivity implements GuJiaContact
     private GuJiaContact.Presenter presenter;
     private SimpleDateFormat simpleDateFormat;
     private SelfDialog selfDialog;
-    private HashMap<String, String> stringHashMap;
+    private HashMap stringHashMap;
 
+    @SuppressLint("SimpleDateFormat")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

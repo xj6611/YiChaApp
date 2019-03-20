@@ -26,6 +26,7 @@ public class HomePageContentActivity extends AppCompatActivity {
     private String[] titles;
     private TextView Title;
     private FrameLayout Add_FrameLayout;
+    private FrameLayout back_Fl;
     private int State;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,16 +70,16 @@ public class HomePageContentActivity extends AppCompatActivity {
     private void initView() {
         MyShouCang__tb_title = ((TabLayout) findViewById(R.id.MyShouCang__tb_title));
         Add_FrameLayout = ((FrameLayout) findViewById(R.id.Add_FrameLayout));
+        back_Fl = ((FrameLayout) findViewById(R.id.back_Fl));
         MyShouCang_ViewPager = ((ViewPager) findViewById(R.id.MyShouCang_ViewPager));
         Title = (TextView) findViewById(R.id.Title);
-        Add_FrameLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(HomePageContentActivity.this, TheStoreSearchActivity.class);
-                startActivity(intent);
-            }
+        Add_FrameLayout.setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.setClass(HomePageContentActivity.this, TheStoreSearchActivity.class);
+            startActivity(intent);
         });
+        back_Fl.setOnClickListener(v -> finish());
+
     }
 
 }

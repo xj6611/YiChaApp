@@ -79,7 +79,8 @@ public class HomePageContentFragment extends BaseFragment implements HoemPageCon
                 presenter.requestPCXingHaoHoemPage(false);
                 break;
             case 2:
-
+                state = 2;
+                presenter.requestCarXingHaoHoemPage(false);
                 break;
 
         }
@@ -98,6 +99,9 @@ public class HomePageContentFragment extends BaseFragment implements HoemPageCon
                 } else if (state == 1) {
                     page2 = 0;
                     presenter.requestPCXingHaoHoemPage(false);
+                }else if (state == 2) {
+                    page2 = 0;
+                    presenter.requestCarXingHaoHoemPage(false);
                 }
 
             }
@@ -110,6 +114,9 @@ public class HomePageContentFragment extends BaseFragment implements HoemPageCon
                 } else if (state == 1) {
                     page2 = page2 + 11;
                     presenter.requestPCXingHaoHoemPage(false);
+                } else if (state == 2) {
+                    page2 = page2 + 11;
+                    presenter.requestCarXingHaoHoemPage(false);
                 }
                 aBoolean = true;
             }
@@ -129,6 +136,9 @@ public class HomePageContentFragment extends BaseFragment implements HoemPageCon
                 } else if (state == 1) {
                     page = 0;
                     presenter.requestPCHoemPage();
+                }else if (state == 2) {
+                    page = 0;
+                    presenter.requestCarHoemPage();
                 }
 
             }
@@ -142,6 +152,9 @@ public class HomePageContentFragment extends BaseFragment implements HoemPageCon
                 } else if (state == 1) {
                     page = page + 11;
                     presenter.requestPCHoemPage();
+                }else if (state == 2) {
+                    page = page + 11;
+                    presenter.requestCarHoemPage();
                 }
             }
         });
@@ -160,6 +173,8 @@ public class HomePageContentFragment extends BaseFragment implements HoemPageCon
                 presenter.requestHoemPage();
             } else if (state == 1) {
                 presenter.requestPCHoemPage();
+            }else if (state == 2) {
+                presenter.requestCarHoemPage();
             }
 //                //选中一级菜单点击位置
             mFirstAdapter.setSelectedPosition(position);
@@ -179,7 +194,6 @@ public class HomePageContentFragment extends BaseFragment implements HoemPageCon
         mSecondAdapter.setOnRecyclerviewItemClickListener((parent, view1, position, id, name) -> {
             mSecondAdapter.setSelectedPosition(position);
             mSecondAdapter.notifyDataSetChanged();
-            Log.i("asss", "ID===" + id);
             if (state == 0) {
                 Intent intent = new Intent();
                 intent.setClass(getActivity(), Phone_DetalisActivity.class);
@@ -259,6 +273,10 @@ public class HomePageContentFragment extends BaseFragment implements HoemPageCon
                 page = 0;
                 Model = value.get(0).getModel();
                 presenter.requestPCHoemPage();
+            }else if (state == 2) {
+                page = 0;
+                Model = value.get(0).getModel();
+                presenter.requestCarHoemPage();
             }
 
         }

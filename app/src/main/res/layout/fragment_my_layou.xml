@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -10,23 +10,24 @@
         android:layout_centerInParent="true"
         android:gravity="center"
         android:text="我的"
-        android:textColor="#000000"
+        android:textColor="#ff000000"
         android:textSize="18.0sp" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10.0dip"
-                android:layout_marginTop="10.0dip">
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="10.0dip">
 
                 <com.yicha.app.Class.CircleImageView
                     android:id="@+id/My_TouXiang_CircleImageView"
@@ -44,12 +45,10 @@
                     android:layout_below="@+id/My_TouXiang_CircleImageView"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="10.0dip"
-                    android:layout_marginTop="15.0dip"
-                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginTop="10.0dip"
                     android:text="佚名（cx0000）"
                     android:textColor="#ff333333"
-                    android:textSize="15.0sp"
-                    />
+                    android:textSize="15.0sp" />
 
                 <TextView
                     android:id="@+id/My_bumen_TextView"
@@ -59,10 +58,10 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="10.0dip"
                     android:layout_marginTop="7.0dip"
-                    android:text="部门：未填写"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:text="部门：雨花台分局"
                     android:textColor="#ff666666"
-                    android:textSize="13.0sp"
-                    android:visibility="gone"/>
+                    android:textSize="13.0sp" />
 
                 <TextView
                     android:id="@+id/My_ZhiWei_TextView"
@@ -75,7 +74,7 @@
                     android:text="职位：未填写"
                     android:textColor="#ff666666"
                     android:textSize="13.0sp"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
             </RelativeLayout>
 
             <View
@@ -103,7 +102,7 @@
             <TextView
                 android:id="@+id/My_Updeta_TextView"
                 android:layout_width="fill_parent"
-                android:layout_height="50.0dip"
+                android:layout_height="45.0dip"
                 android:layout_marginLeft="15.0dip"
                 android:gravity="center_vertical"
                 android:text="关于"
@@ -115,15 +114,28 @@
                 android:layout_height="1.0dip"
                 android:background="@color/main_bg" />
 
-            <TextView
-                android:id="@+id/My_QingLiHuangCun_TextView"
+            <RelativeLayout
                 android:layout_width="fill_parent"
-                android:layout_height="50.0dip"
-                android:layout_marginLeft="15.0dip"
-                android:gravity="center_vertical"
-                android:text="版本"
-                android:textColor="#ff333333"
-                android:textSize="15.0sp" />
+                android:layout_height="@dimen/dp_45">
+
+                <TextView
+                    android:id="@+id/My_QingLiHuangCun_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45.0dip"
+                    android:layout_marginLeft="15.0dip"
+                    android:gravity="center_vertical"
+                    android:text="版本"
+                    android:textColor="#ff333333"
+                    android:textSize="15.0sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:text="V_0.01" />
+            </RelativeLayout>
 
             <View
                 android:layout_width="fill_parent"
@@ -133,9 +145,9 @@
             <TextView
                 android:id="@+id/ResetYouPassword"
                 android:layout_width="fill_parent"
-                android:layout_height="50.0dip"
+                android:layout_height="45.0dip"
                 android:layout_marginLeft="15.0dip"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="15.0dip"
                 android:gravity="center_vertical"
                 android:text="修改密码"
                 android:textColor="#ff333333"
@@ -145,13 +157,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="1.0dip"
                 android:background="@color/main_bg" />
-             <TextView
+
+            <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="50.0dip"
+                android:layout_height="45.0dip"
                 android:layout_marginLeft="15.0dip"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="15.0dip"
                 android:gravity="center_vertical"
-                android:text="关于"
+                android:text="分享"
                 android:textColor="#ff333333"
                 android:textSize="15.0sp" />
 
@@ -162,22 +175,24 @@
 
             <Button
                 android:id="@+id/TuiChu_Button"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:layout_marginTop="40dp"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_marginLeft="50.0dip"
+                android:layout_marginTop="40.0dip"
+                android:layout_marginRight="50.0dip"
                 android:background="@color/red"
                 android:text="退出登录"
-                android:textColor="#ffffff"
-                android:textSize="18sp" />
+                android:textColor="#ffffffff"
+                android:textSize="18.0sp" />
         </LinearLayout>
     </ScrollView>
 
-    <View
+    <TextView
         android:layout_width="fill_parent"
-        android:layout_height="1.0dip"
-        android:background="@color/main_bg" />
-
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:gravity="center"
+        android:text="南京市公安局雨花台分局"
+        android:textColor="@color/A333333"
+        android:textSize="@dimen/sp_15" />
 </LinearLayout>

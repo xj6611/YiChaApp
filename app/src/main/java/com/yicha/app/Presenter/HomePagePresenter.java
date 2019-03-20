@@ -197,14 +197,116 @@ public class HomePagePresenter implements HoemPageContact.Presenter {
     }
 
     @Override
+    public void requestCarHoemPage() {
+        view.showProgress(null);
+        RetrofitService service = RetrofitClient.getInstance().create(RetrofitService.class);
+        Log.i("asss","page=="+view.getPage()+"pagesize=="+view.getPageSize());
+        service.getBikeList(view.getUid(),view.getToken(),view.getPage(),view.getPageSize(),view.getModel())//获取Observable对象
+                .subscribeOn(Schedulers.newThread())//请求在新的线程中执行
+                .observeOn(Schedulers.io())         //请求完成后在io线程中执行
+                .observeOn(AndroidSchedulers.mainThread())//最后在主线程中执行
+                .subscribe(new Observer<BaseEntity<List<getMobleListEntity>>>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(final BaseEntity<List<getMobleListEntity>> value) {
+                        if (value.getResult() == 1) {
+                            if(view.getPage()==0){
+                                view.refreshList(value.getData());
+                            }else{
+                                view.loadMoreList(value.getData());
+                            }
+                            if(value.getData()!=null) {
+                                view.showOrHideLoadMore(value.getData().size()==view.getPageSize());
+                            }else{
+                                view.showOrHideLoadMore(false);
+                            }
+                        }else {
+                            view.showToast(value.getMsg());
+                        }
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        e.printStackTrace();
+                        Log.i("asss","Throwable=="+e);
+                        view.dismissProgress();
+                        view.showNetError();
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        view.loadDataSuccess();
+                        view.dismissProgress();
+                    }
+                });
+    }
+
+    @Override
     public void requestPCXingHaoHoemPage(boolean b) {
         if(b){
             view.showProgress(null);
         }
         view.showProgress(null);
         RetrofitService service = RetrofitClient.getInstance().create(RetrofitService.class);
-        Log.i("asss","page2=="+view.getPage2()+"pagesize2=="+view.getPageSize2());
         service.PCModelList(view.getUid(),view.getToken(),view.getPage2(),view.getPageSize2())//获取Observable对象
+                .subscribeOn(Schedulers.newThread())//请求在新的线程中执行
+                .observeOn(Schedulers.io())         //请求完成后在io线程中执行
+                .observeOn(AndroidSchedulers.mainThread())//最后在主线程中执行
+                .subscribe(new Observer<BaseEntity<List<MobleListEntity>>>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(final BaseEntity<List<MobleListEntity>> value) {
+                        if (value.getResult() == 1) {
+                            if(view.getPage2()==0){
+                                view.HomePageSuccess(value.getData());
+                                view.refreshList2(value.getData());
+                            }else{
+                                view.loadMoreList2(value.getData());
+                            }
+                            if(value.getData()!=null) {
+                                view.showOrHideLoadMore2(value.getData().size()==view.getPageSize());
+                            }else{
+                                view.showOrHideLoadMore2(false);
+                            }
+                        } else {
+                            view.showToast(value.getMsg());
+                        }
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        e.printStackTrace();
+                        Log.i("asss","Throwable=="+e);
+                        view.dismissProgress();
+                        view.showNetError();
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        view.loadDataSuccess2();
+                        view.dismissProgress();
+                    }
+                });
+    }
+
+    @Override
+    public void requestCarXingHaoHoemPage(boolean b) {
+        if(b){
+            view.showProgress(null);
+        }
+        view.showProgress(null);
+        RetrofitService service = RetrofitClient.getInstance().create(RetrofitService.class);
+        service.getBikeModelList(view.getUid(),view.getToken(),view.getPage2(), view.getPageSize2())//获取Observable对象
                 .subscribeOn(Schedulers.newThread())//请求在新的线程中执行
                 .observeOn(Schedulers.io())         //请求完成后在io线程中执行
                 .observeOn(AndroidSchedulers.mainThread())//最后在主线程中执行

@@ -112,8 +112,6 @@ public class PC_ValuationActivity extends BaseActivity implements GuJiaContact.V
         StyledDialog.buildBottomItemDialog(strings, "取消", new MyItemDialogListener() {
             @Override
             public void onItemClick(CharSequence text, int position) {
-                Log.i("asss", "position==" + position);
-                Log.i("asss", strings.get(position));
                 chengse.setText(strings.get(position));
             }
 

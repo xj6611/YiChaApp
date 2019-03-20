@@ -40,7 +40,8 @@ public interface HoemPageContact {
         void requestHoemPage();
         void requestXingHaoHoemPage(boolean b);
         void requestPCHoemPage();
+        void requestCarHoemPage();
         void requestPCXingHaoHoemPage(boolean b);
-
+        void requestCarXingHaoHoemPage(boolean b);
     }
 }
